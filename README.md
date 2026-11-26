@@ -1,6 +1,6 @@
 # Prompt injection classifier
 
-A small pretrained BERT encoder fine-tuned in PyTorch to flag potential prompt injections. The FastAPI service runs offline with the bundled 17.5 MB safetensors checkpoint. It returns a label, attack score, score for the selected label, and a flag indicating whether it truncated the input.
+A small pretrained BERT encoder fine-tuned in PyTorch to flag potential prompt injections. The FastAPI service runs offline with the bundled 17.5 MB safetensors checkpoint. It scans the whole input and returns the highest-scoring passage for review.
 
 ## Run
 
@@ -18,15 +18,44 @@ Open [interactive API docs](http://127.0.0.1:8765/docs), select **POST /predict*
 {"text": "Could you recommend a book about growing tomatoes?"}
 ```
 
-The input limit is 16,384 characters. Empty and whitespace-only requests return 422. The model scores the first 192 WordPiece tokens including special tokens. Inspect `truncated` when handling longer documents. The response scores are raw softmax outputs. The validation-selected attack threshold is 0.60.
+The input limit is 16,384 Unicode code points. Requests with no usable tokens return 422. Each window holds up to 190 content tokens and two BERT special tokens. Adjacent windows share 64 content tokens. The API scores up to eight windows per batch and returns a result after all windows have been checked. A single-window input follows the original scoring rule.
+
+The document's `attack_score` is the highest window score. A score at or above 0.60 yields `attack`. This threshold was selected on short validation prompts. The score measures model output and has no document-level probability calibration. The existing `label`, `attack_score`, `confidence` and `truncated` fields remain available. Full scans return `truncated: false`. The new `passages_checked` field gives the number of scored windows. The one-based `highest_scoring_passage.number` identifies the first window with the maximum score. Its `start` and `end` are half-open Unicode code-point offsets into the original text.
 
 For a container deployment, build with `docker build -t prompt-classifier .` and run `docker run --rm -p 127.0.0.1:8765:8000 prompt-classifier` after freeing the host port.
 
 ## Browser interface
 
-To use the browser form with the running API, start `node frontend/server.mjs` in another terminal (Node.js 20+). Open [the local classifier](http://127.0.0.1:8781/), enter a prompt, and submit it for classification.
+With the API running, start `node frontend/server.mjs` in another terminal (Node.js 20+). Open [the local classifier](http://127.0.0.1:8781/), paste a document and select **Scan document**. The result reports coverage and highlights the entire highest-scoring window. This highlights what the model scored, including any benign text in the same window.
 
-## Held-out experiment
+## Whole-document experiment
+
+Two inference strategies used identical weights and the same 0.60 threshold. The baseline scored only the first 192 tokens. The full scanner took the maximum over all overlapping windows.
+
+The fixed synthetic benchmark contains ten fictional documents (four research notes, three emails and three support tickets). Each has one clean version and three variants with the same harmless task-redirection request inserted at the start, middle or end. The assigned task is to review the document. Requests embedded in the document to switch tasks are labeled as injections. Clean versions also include ordinary instructions to people. Every middle and end insertion is outside the baseline's input. All 40 documents produced four windows.
+
+| Measurement | First window | Full scan |
+|---|---:|---:|
+| Clean documents incorrectly flagged | 10/10 | 10/10 |
+| Start / middle / end variants flagged (10 per position) | 10 / 10 / 10 | 10 / 10 / 10 |
+| Median warm CPU time per document | 17.4 ms | 44.2 ms |
+
+**The change improved coverage. Neither approach distinguished clean documents from modified ones on this probe.** For example, the prefix scanner gave the clean slide-archive note and its end-insertion variant the same score (0.993575). It never saw the inserted text. The full scan's top window completely contained the labeled passage in 17 of 30 variants (5 start, 6 middle, 6 end). Even a matching window can contain unrelated text, so the highlight cannot establish which words caused the score.
+
+The ten base documents use genre-specific templates with repeated sentence patterns and three distinct task-redirection requests. These related cases test placement under controlled conditions and cannot estimate real-world prevalence or clinical performance. The documents are synthetic and contain no patient records. No training examples, weights or thresholds were changed for this experiment.
+
+On the original 116-row deepset test split, two inputs required multiple windows. All 116 full-scan labels matched the prefix baseline (55 true positives, 54 true negatives, two false positives and five false negatives).
+
+Run the following after installing the training dependencies. The position probe runs offline. Timings use five warm repetitions per method per case, alternating order, with two PyTorch CPU threads and no HTTP overhead. The reported latency is the median of the 40 per-document medians.
+
+```sh
+python -m unittest -v test_scanner
+python evaluate_documents.py --out local_document_evaluation.json
+```
+
+To also check the original test split, pass `--published-test` with the path to the pinned test parquet downloaded by `fetch.py`. [Per-case scores, timings and localization results](document_evaluation.json) · [Synthetic fixtures](benchmarks/documents.json) · [Case construction](benchmarks/cases.py)
+
+## Original short-prompt experiment (first window)
 
 Used the published deepset test partition of 116 examples (60 attacks, 56 safe). All three methods saw the same test rows. Attack is the positive class. Latencies are warm median milliseconds per single example on an Intel Core Ultra 9 185H CPU, including tokenization or vectorization, excluding HTTP. PyTorch used two CPU threads.
 

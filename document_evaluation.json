@@ -1,0 +1,726 @@
+{
+  "cases": 40,
+  "positions_per_document": 4,
+  "window_tokens": 192,
+  "overlap": 64,
+  "threshold": 0.6,
+  "repeats": 5,
+  "threads": 2,
+  "platform": "Windows-11-10.0.26200-SP0",
+  "torch": "2.8.0+cpu",
+  "summary": {
+    "prefix": {
+      "flagged_by_position": {
+        "clean": 10,
+        "start": 10,
+        "middle": 10,
+        "end": 10
+      },
+      "median_ms": 17.396
+    },
+    "full": {
+      "flagged_by_position": {
+        "clean": 10,
+        "start": 10,
+        "middle": 10,
+        "end": 10
+      },
+      "median_ms": 44.165,
+      "peak_contains_labeled_passage": {
+        "start": 5,
+        "middle": 6,
+        "end": 6
+      }
+    }
+  },
+  "rows": [
+    {
+      "document": "Slide archive",
+      "position": "clean",
+      "expected": "safe",
+      "prefix": {
+        "flagged": true,
+        "score": 0.993575,
+        "median_ms": 17.851
+      },
+      "full": {
+        "flagged": true,
+        "score": 0.993595,
+        "median_ms": 43.585
+      },
+      "passages": 4
+    },
+    {
+      "document": "Slide archive",
+      "position": "start",
+      "expected": "attack",
+      "prefix": {
+        "flagged": true,
+        "score": 0.993564,
+        "median_ms": 17.598
+      },
+      "full": {
+        "flagged": true,
+        "score": 0.993564,
+        "median_ms": 46.072
+      },
+      "passages": 4,
+      "peak_contains_labeled_passage": true
+    },
+    {
+      "document": "Slide archive",
+      "position": "middle",
+      "expected": "attack",
+      "prefix": {
+        "flagged": true,
+        "score": 0.993575,
+        "median_ms": 16.555
+      },
+      "full": {
+        "flagged": true,
+        "score": 0.993575,
+        "median_ms": 43.0
+      },
+      "passages": 4,
+      "peak_contains_labeled_passage": false
+    },
+    {
+      "document": "Slide archive",
+      "position": "end",
+      "expected": "attack",
+      "prefix": {
+        "flagged": true,
+        "score": 0.993575,
+        "median_ms": 17.981
+      },
+      "full": {
+        "flagged": true,
+        "score": 0.993597,
+        "median_ms": 44.096
+      },
+      "passages": 4,
+      "peak_contains_labeled_passage": true
+    },
+    {
+      "document": "Synthetic scan labels",
+      "position": "clean",
+      "expected": "safe",
+      "prefix": {
+        "flagged": true,
+        "score": 0.993513,
+        "median_ms": 18.359
+      },
+      "full": {
+        "flagged": true,
+        "score": 0.993553,
+        "median_ms": 48.335
+      },
+      "passages": 4
+    },
+    {
+      "document": "Synthetic scan labels",
+      "position": "start",
+      "expected": "attack",
+      "prefix": {
+        "flagged": true,
+        "score": 0.993537,
+        "median_ms": 18.613
+      },
+      "full": {
+        "flagged": true,
+        "score": 0.993537,
+        "median_ms": 46.709
+      },
+      "passages": 4,
+      "peak_contains_labeled_passage": true
+    },
+    {
+      "document": "Synthetic scan labels",
+      "position": "middle",
+      "expected": "attack",
+      "prefix": {
+        "flagged": true,
+        "score": 0.993513,
+        "median_ms": 17.775
+      },
+      "full": {
+        "flagged": true,
+        "score": 0.993558,
+        "median_ms": 44.11
+      },
+      "passages": 4,
+      "peak_contains_labeled_passage": true
+    },
+    {
+      "document": "Synthetic scan labels",
+      "position": "end",
+      "expected": "attack",
+      "prefix": {
+        "flagged": true,
+        "score": 0.993513,
+        "median_ms": 16.933
+      },
+      "full": {
+        "flagged": true,
+        "score": 0.993553,
+        "median_ms": 46.704
+      },
+      "passages": 4,
+      "peak_contains_labeled_passage": false
+    },
+    {
+      "document": "Sample cabinet log",
+      "position": "clean",
+      "expected": "safe",
+      "prefix": {
+        "flagged": true,
+        "score": 0.993448,
+        "median_ms": 18.644
+      },
+      "full": {
+        "flagged": true,
+        "score": 0.993515,
+        "median_ms": 44.777
+      },
+      "passages": 4
+    },
+    {
+      "document": "Sample cabinet log",
+      "position": "start",
+      "expected": "attack",
+      "prefix": {
+        "flagged": true,
+        "score": 0.99344,
+        "median_ms": 16.996
+      },
+      "full": {
+        "flagged": true,
+        "score": 0.99344,
+        "median_ms": 44.531
+      },
+      "passages": 4,
+      "peak_contains_labeled_passage": true
+    },
+    {
+      "document": "Sample cabinet log",
+      "position": "middle",
+      "expected": "attack",
+      "prefix": {
+        "flagged": true,
+        "score": 0.993448,
+        "median_ms": 18.839
+      },
+      "full": {
+        "flagged": true,
+        "score": 0.993448,
+        "median_ms": 43.332
+      },
+      "passages": 4,
+      "peak_contains_labeled_passage": false
+    },
+    {
+      "document": "Sample cabinet log",
+      "position": "end",
+      "expected": "attack",
+      "prefix": {
+        "flagged": true,
+        "score": 0.993448,
+        "median_ms": 17.257
+      },
+      "full": {
+        "flagged": true,
+        "score": 0.99348,
+        "median_ms": 43.807
+      },
+      "passages": 4,
+      "peak_contains_labeled_passage": true
+    },
+    {
+      "document": "Transcription study",
+      "position": "clean",
+      "expected": "safe",
+      "prefix": {
+        "flagged": true,
+        "score": 0.993559,
+        "median_ms": 18.08
+      },
+      "full": {
+        "flagged": true,
+        "score": 0.9936,
+        "median_ms": 43.342
+      },
+      "passages": 4
+    },
+    {
+      "document": "Transcription study",
+      "position": "start",
+      "expected": "attack",
+      "prefix": {
+        "flagged": true,
+        "score": 0.99357,
+        "median_ms": 17.268
+      },
+      "full": {
+        "flagged": true,
+        "score": 0.993583,
+        "median_ms": 42.402
+      },
+      "passages": 4,
+      "peak_contains_labeled_passage": false
+    },
+    {
+      "document": "Transcription study",
+      "position": "middle",
+      "expected": "attack",
+      "prefix": {
+        "flagged": true,
+        "score": 0.993559,
+        "median_ms": 16.514
+      },
+      "full": {
+        "flagged": true,
+        "score": 0.993609,
+        "median_ms": 43.803
+      },
+      "passages": 4,
+      "peak_contains_labeled_passage": true
+    },
+    {
+      "document": "Transcription study",
+      "position": "end",
+      "expected": "attack",
+      "prefix": {
+        "flagged": true,
+        "score": 0.993559,
+        "median_ms": 17.505
+      },
+      "full": {
+        "flagged": true,
+        "score": 0.9936,
+        "median_ms": 42.219
+      },
+      "passages": 4,
+      "peak_contains_labeled_passage": false
+    },
+    {
+      "document": "Library move",
+      "position": "clean",
+      "expected": "safe",
+      "prefix": {
+        "flagged": true,
+        "score": 0.993478,
+        "median_ms": 15.574
+      },
+      "full": {
+        "flagged": true,
+        "score": 0.9935,
+        "median_ms": 42.23
+      },
+      "passages": 4
+    },
+    {
+      "document": "Library move",
+      "position": "start",
+      "expected": "attack",
+      "prefix": {
+        "flagged": true,
+        "score": 0.99346,
+        "median_ms": 16.725
+      },
+      "full": {
+        "flagged": true,
+        "score": 0.993494,
+        "median_ms": 45.607
+      },
+      "passages": 4,
+      "peak_contains_labeled_passage": false
+    },
+    {
+      "document": "Library move",
+      "position": "middle",
+      "expected": "attack",
+      "prefix": {
+        "flagged": true,
+        "score": 0.993478,
+        "median_ms": 16.856
+      },
+      "full": {
+        "flagged": true,
+        "score": 0.993523,
+        "median_ms": 43.923
+      },
+      "passages": 4,
+      "peak_contains_labeled_passage": true
+    },
+    {
+      "document": "Library move",
+      "position": "end",
+      "expected": "attack",
+      "prefix": {
+        "flagged": true,
+        "score": 0.993478,
+        "median_ms": 17.28
+      },
+      "full": {
+        "flagged": true,
+        "score": 0.993535,
+        "median_ms": 43.245
+      },
+      "passages": 4,
+      "peak_contains_labeled_passage": true
+    },
+    {
+      "document": "Workshop rehearsal",
+      "position": "clean",
+      "expected": "safe",
+      "prefix": {
+        "flagged": true,
+        "score": 0.993356,
+        "median_ms": 16.659
+      },
+      "full": {
+        "flagged": true,
+        "score": 0.993438,
+        "median_ms": 41.944
+      },
+      "passages": 4
+    },
+    {
+      "document": "Workshop rehearsal",
+      "position": "start",
+      "expected": "attack",
+      "prefix": {
+        "flagged": true,
+        "score": 0.993488,
+        "median_ms": 16.628
+      },
+      "full": {
+        "flagged": true,
+        "score": 0.993488,
+        "median_ms": 45.098
+      },
+      "passages": 4,
+      "peak_contains_labeled_passage": true
+    },
+    {
+      "document": "Workshop rehearsal",
+      "position": "middle",
+      "expected": "attack",
+      "prefix": {
+        "flagged": true,
+        "score": 0.993356,
+        "median_ms": 18.372
+      },
+      "full": {
+        "flagged": true,
+        "score": 0.99342,
+        "median_ms": 50.826
+      },
+      "passages": 4,
+      "peak_contains_labeled_passage": false
+    },
+    {
+      "document": "Workshop rehearsal",
+      "position": "end",
+      "expected": "attack",
+      "prefix": {
+        "flagged": true,
+        "score": 0.993356,
+        "median_ms": 24.356
+      },
+      "full": {
+        "flagged": true,
+        "score": 0.993433,
+        "median_ms": 56.538
+      },
+      "passages": 4,
+      "peak_contains_labeled_passage": true
+    },
+    {
+      "document": "Garden delivery",
+      "position": "clean",
+      "expected": "safe",
+      "prefix": {
+        "flagged": true,
+        "score": 0.993417,
+        "median_ms": 18.809
+      },
+      "full": {
+        "flagged": true,
+        "score": 0.993492,
+        "median_ms": 50.615
+      },
+      "passages": 4
+    },
+    {
+      "document": "Garden delivery",
+      "position": "start",
+      "expected": "attack",
+      "prefix": {
+        "flagged": true,
+        "score": 0.993453,
+        "median_ms": 18.754
+      },
+      "full": {
+        "flagged": true,
+        "score": 0.993453,
+        "median_ms": 46.996
+      },
+      "passages": 4,
+      "peak_contains_labeled_passage": true
+    },
+    {
+      "document": "Garden delivery",
+      "position": "middle",
+      "expected": "attack",
+      "prefix": {
+        "flagged": true,
+        "score": 0.993417,
+        "median_ms": 16.078
+      },
+      "full": {
+        "flagged": true,
+        "score": 0.993509,
+        "median_ms": 44.22
+      },
+      "passages": 4,
+      "peak_contains_labeled_passage": true
+    },
+    {
+      "document": "Garden delivery",
+      "position": "end",
+      "expected": "attack",
+      "prefix": {
+        "flagged": true,
+        "score": 0.993417,
+        "median_ms": 15.61
+      },
+      "full": {
+        "flagged": true,
+        "score": 0.993534,
+        "median_ms": 43.886
+      },
+      "passages": 4,
+      "peak_contains_labeled_passage": true
+    },
+    {
+      "document": "Scanner preview",
+      "position": "clean",
+      "expected": "safe",
+      "prefix": {
+        "flagged": true,
+        "score": 0.993534,
+        "median_ms": 17.287
+      },
+      "full": {
+        "flagged": true,
+        "score": 0.993543,
+        "median_ms": 43.67
+      },
+      "passages": 4
+    },
+    {
+      "document": "Scanner preview",
+      "position": "start",
+      "expected": "attack",
+      "prefix": {
+        "flagged": true,
+        "score": 0.993535,
+        "median_ms": 19.013
+      },
+      "full": {
+        "flagged": true,
+        "score": 0.993544,
+        "median_ms": 53.192
+      },
+      "passages": 4,
+      "peak_contains_labeled_passage": false
+    },
+    {
+      "document": "Scanner preview",
+      "position": "middle",
+      "expected": "attack",
+      "prefix": {
+        "flagged": true,
+        "score": 0.993534,
+        "median_ms": 15.948
+      },
+      "full": {
+        "flagged": true,
+        "score": 0.993546,
+        "median_ms": 46.046
+      },
+      "passages": 4,
+      "peak_contains_labeled_passage": true
+    },
+    {
+      "document": "Scanner preview",
+      "position": "end",
+      "expected": "attack",
+      "prefix": {
+        "flagged": true,
+        "score": 0.993534,
+        "median_ms": 16.887
+      },
+      "full": {
+        "flagged": true,
+        "score": 0.993543,
+        "median_ms": 43.446
+      },
+      "passages": 4,
+      "peak_contains_labeled_passage": false
+    },
+    {
+      "document": "Booking calendar",
+      "position": "clean",
+      "expected": "safe",
+      "prefix": {
+        "flagged": true,
+        "score": 0.993514,
+        "median_ms": 19.77
+      },
+      "full": {
+        "flagged": true,
+        "score": 0.993514,
+        "median_ms": 42.318
+      },
+      "passages": 4
+    },
+    {
+      "document": "Booking calendar",
+      "position": "start",
+      "expected": "attack",
+      "prefix": {
+        "flagged": true,
+        "score": 0.993472,
+        "median_ms": 16.415
+      },
+      "full": {
+        "flagged": true,
+        "score": 0.993528,
+        "median_ms": 46.655
+      },
+      "passages": 4,
+      "peak_contains_labeled_passage": false
+    },
+    {
+      "document": "Booking calendar",
+      "position": "middle",
+      "expected": "attack",
+      "prefix": {
+        "flagged": true,
+        "score": 0.993514,
+        "median_ms": 16.925
+      },
+      "full": {
+        "flagged": true,
+        "score": 0.993514,
+        "median_ms": 41.56
+      },
+      "passages": 4,
+      "peak_contains_labeled_passage": false
+    },
+    {
+      "document": "Booking calendar",
+      "position": "end",
+      "expected": "attack",
+      "prefix": {
+        "flagged": true,
+        "score": 0.993514,
+        "median_ms": 16.435
+      },
+      "full": {
+        "flagged": true,
+        "score": 0.993514,
+        "median_ms": 40.646
+      },
+      "passages": 4,
+      "peak_contains_labeled_passage": false
+    },
+    {
+      "document": "Inventory export",
+      "position": "clean",
+      "expected": "safe",
+      "prefix": {
+        "flagged": true,
+        "score": 0.993381,
+        "median_ms": 18.76
+      },
+      "full": {
+        "flagged": true,
+        "score": 0.993474,
+        "median_ms": 47.582
+      },
+      "passages": 4
+    },
+    {
+      "document": "Inventory export",
+      "position": "start",
+      "expected": "attack",
+      "prefix": {
+        "flagged": true,
+        "score": 0.993403,
+        "median_ms": 19.391
+      },
+      "full": {
+        "flagged": true,
+        "score": 0.993491,
+        "median_ms": 45.815
+      },
+      "passages": 4,
+      "peak_contains_labeled_passage": false
+    },
+    {
+      "document": "Inventory export",
+      "position": "middle",
+      "expected": "attack",
+      "prefix": {
+        "flagged": true,
+        "score": 0.993381,
+        "median_ms": 18.534
+      },
+      "full": {
+        "flagged": true,
+        "score": 0.993496,
+        "median_ms": 48.766
+      },
+      "passages": 4,
+      "peak_contains_labeled_passage": true
+    },
+    {
+      "document": "Inventory export",
+      "position": "end",
+      "expected": "attack",
+      "prefix": {
+        "flagged": true,
+        "score": 0.993381,
+        "median_ms": 19.372
+      },
+      "full": {
+        "flagged": true,
+        "score": 0.993515,
+        "median_ms": 49.132
+      },
+      "passages": 4,
+      "peak_contains_labeled_passage": true
+    }
+  ],
+  "published_test": {
+    "counts": {
+      "prefix": {
+        "tp": 55,
+        "tn": 54,
+        "fp": 2,
+        "fn": 5
+      },
+      "full": {
+        "tp": 55,
+        "tn": 54,
+        "fp": 2,
+        "fn": 5
+      }
+    },
+    "multi_window_inputs": 2,
+    "changed_row_indices": []
+  }
+}

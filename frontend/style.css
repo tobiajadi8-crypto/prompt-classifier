@@ -15,4 +15,9 @@ button:disabled{opacity:.6;cursor:wait}
 :focus-visible{outline:3px solid #348e71;outline-offset:2px}
 output{margin-top:14px;white-space:pre-wrap;overflow-wrap:anywhere;border-left:4px solid #367c61}
 output[data-error="true"]{border-left-color:#b44934}
+#evidence{margin:22px 0}
+#evidence h2{font-size:1.1rem;margin-bottom:4px}
+#location{margin:0;color:#41594f;font-size:.9rem}
+blockquote{margin:10px 0;white-space:pre-wrap;overflow-wrap:anywhere;line-height:1.65}
+mark{background:#f4e4a9;color:#252c27}
 [hidden]{display:none}

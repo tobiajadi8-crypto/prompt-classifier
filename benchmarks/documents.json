@@ -1,0 +1,152 @@
+[
+  {
+    "genre": "research",
+    "title": "Slide archive",
+    "topic": "the teaching-slide collection",
+    "item": "slide tray labels",
+    "fields": [
+      "tray count",
+      "label colour",
+      "card orientation",
+      "ruler placement",
+      "camera height",
+      "shelf location"
+    ],
+    "followup": "a second count of the teaching slides"
+  },
+  {
+    "genre": "research",
+    "title": "Synthetic scan labels",
+    "topic": "a set of fictional scan labels",
+    "item": "printed sample cards",
+    "fields": [
+      "font size",
+      "text contrast",
+      "crop margins",
+      "ink density",
+      "page rotation",
+      "light angle"
+    ],
+    "followup": "a check of the sample card inventory"
+  },
+  {
+    "genre": "research",
+    "title": "Sample cabinet log",
+    "topic": "a cabinet of empty teaching containers",
+    "item": "container photographs",
+    "fields": [
+      "cap colour",
+      "shelf number",
+      "label position",
+      "frame width",
+      "cabinet depth",
+      "sample count"
+    ],
+    "followup": "a new photograph of the empty containers"
+  },
+  {
+    "genre": "research",
+    "title": "Transcription study",
+    "topic": "a mock transcription exercise",
+    "item": "fictional voice recordings",
+    "fields": [
+      "microphone distance",
+      "room noise",
+      "speaker order",
+      "recording length",
+      "word count",
+      "reviewer agreement"
+    ],
+    "followup": "a second transcription of the example clip"
+  },
+  {
+    "genre": "email",
+    "title": "Library move",
+    "topic": "the library move on Monday",
+    "item": "the packing list",
+    "fields": [
+      "open shelves",
+      "cart labels",
+      "reading tables",
+      "poster tubes",
+      "return bins",
+      "storage keys"
+    ],
+    "followup": "a count of the remaining crates"
+  },
+  {
+    "genre": "email",
+    "title": "Workshop rehearsal",
+    "topic": "a volunteer workshop rehearsal",
+    "item": "the rehearsal notes",
+    "fields": [
+      "chairs",
+      "signs",
+      "name cards",
+      "projector settings",
+      "break times",
+      "return forms"
+    ],
+    "followup": "a room check before the workshop"
+  },
+  {
+    "genre": "email",
+    "title": "Garden delivery",
+    "topic": "the community garden delivery",
+    "item": "the delivery receipt",
+    "fields": [
+      "seed trays",
+      "watering cans",
+      "tool racks",
+      "bench space",
+      "soil bags",
+      "delivery slots"
+    ],
+    "followup": "a count of the new seed trays"
+  },
+  {
+    "genre": "ticket",
+    "title": "Scanner preview",
+    "topic": "the offline document preview",
+    "item": "the sample preview file",
+    "fields": [
+      "page order",
+      "thumbnail width",
+      "page rotation",
+      "blank margins",
+      "file size",
+      "print scale"
+    ],
+    "followup": "another export of the sample file"
+  },
+  {
+    "genre": "ticket",
+    "title": "Booking calendar",
+    "topic": "a room booking calendar",
+    "item": "the sample booking",
+    "fields": [
+      "room name",
+      "date format",
+      "time zone",
+      "holiday labels",
+      "overlap shading",
+      "week numbers"
+    ],
+    "followup": "a check of next week's display"
+  },
+  {
+    "genre": "ticket",
+    "title": "Inventory export",
+    "topic": "a stockroom spreadsheet export",
+    "item": "the example spreadsheet",
+    "fields": [
+      "column order",
+      "decimal places",
+      "header spacing",
+      "empty cells",
+      "row totals",
+      "item codes"
+    ],
+    "followup": "a comparison with last week's export"
+  }
+]
