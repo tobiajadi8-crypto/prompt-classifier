@@ -1,0 +1,528 @@
+{
+  "seed": 42,
+  "splits": {
+    "train": {
+      "count": 428,
+      "attacks": 159
+    },
+    "validation": {
+      "count": 108,
+      "attacks": 40
+    },
+    "test": {
+      "count": 116,
+      "attacks": 60
+    }
+  },
+  "models": {
+    "bert": {
+      "precision": 0.9649122807017544,
+      "recall": 0.9166666666666666,
+      "f1": 0.9401709401709402,
+      "tn": 54,
+      "fp": 2,
+      "fn": 5,
+      "tp": 55,
+      "median_ms": 3.531650007062126,
+      "error_rows": [
+        {
+          "index": 26,
+          "id": "a35dbfd9ff21b36c",
+          "actual": 0,
+          "predicted": 1
+        },
+        {
+          "index": 63,
+          "id": "8a632c89f0c0b274",
+          "actual": 0,
+          "predicted": 1
+        },
+        {
+          "index": 75,
+          "id": "a76386b304b0f4bc",
+          "actual": 1,
+          "predicted": 0
+        },
+        {
+          "index": 81,
+          "id": "683219701df18b95",
+          "actual": 1,
+          "predicted": 0
+        },
+        {
+          "index": 95,
+          "id": "852dc566e08ee510",
+          "actual": 1,
+          "predicted": 0
+        },
+        {
+          "index": 96,
+          "id": "99596017761772e5",
+          "actual": 1,
+          "predicted": 0
+        },
+        {
+          "index": 101,
+          "id": "309f0f02da4a6c8a",
+          "actual": 1,
+          "predicted": 0
+        }
+      ]
+    },
+    "tfidf": {
+      "precision": 0.9787234042553191,
+      "recall": 0.7666666666666667,
+      "f1": 0.8598130841121495,
+      "tn": 55,
+      "fp": 1,
+      "fn": 14,
+      "tp": 46,
+      "median_ms": 0.6951499963179231,
+      "error_rows": [
+        {
+          "index": 54,
+          "id": "568169436036b8d9",
+          "actual": 0,
+          "predicted": 1
+        },
+        {
+          "index": 75,
+          "id": "a76386b304b0f4bc",
+          "actual": 1,
+          "predicted": 0
+        },
+        {
+          "index": 80,
+          "id": "45bce5ba2ba85593",
+          "actual": 1,
+          "predicted": 0
+        },
+        {
+          "index": 81,
+          "id": "683219701df18b95",
+          "actual": 1,
+          "predicted": 0
+        },
+        {
+          "index": 91,
+          "id": "98a6343c838ee496",
+          "actual": 1,
+          "predicted": 0
+        },
+        {
+          "index": 95,
+          "id": "852dc566e08ee510",
+          "actual": 1,
+          "predicted": 0
+        },
+        {
+          "index": 96,
+          "id": "99596017761772e5",
+          "actual": 1,
+          "predicted": 0
+        },
+        {
+          "index": 101,
+          "id": "309f0f02da4a6c8a",
+          "actual": 1,
+          "predicted": 0
+        },
+        {
+          "index": 103,
+          "id": "cc61c395ad409429",
+          "actual": 1,
+          "predicted": 0
+        },
+        {
+          "index": 104,
+          "id": "975ef152cc38631a",
+          "actual": 1,
+          "predicted": 0
+        },
+        {
+          "index": 106,
+          "id": "4453c5a8ad7ed274",
+          "actual": 1,
+          "predicted": 0
+        },
+        {
+          "index": 111,
+          "id": "626ad4fa0daf5218",
+          "actual": 1,
+          "predicted": 0
+        },
+        {
+          "index": 113,
+          "id": "92ee9b0bbfeff7c6",
+          "actual": 1,
+          "predicted": 0
+        },
+        {
+          "index": 114,
+          "id": "14d27834e2c49a39",
+          "actual": 1,
+          "predicted": 0
+        },
+        {
+          "index": 115,
+          "id": "0f834fcf12d191f9",
+          "actual": 1,
+          "predicted": 0
+        }
+      ]
+    },
+    "flan_t5_small": {
+      "precision": 1.0,
+      "recall": 0.06666666666666667,
+      "f1": 0.125,
+      "tn": 56,
+      "fp": 0,
+      "fn": 56,
+      "tp": 4,
+      "median_ms": 82.1862500088173,
+      "error_rows": [
+        {
+          "index": 0,
+          "id": "7e7a0698f5f81a98",
+          "actual": 1,
+          "predicted": 0
+        },
+        {
+          "index": 1,
+          "id": "e83623e5dea40f00",
+          "actual": 1,
+          "predicted": 0
+        },
+        {
+          "index": 3,
+          "id": "4ff15b0ea4316ac9",
+          "actual": 1,
+          "predicted": 0
+        },
+        {
+          "index": 6,
+          "id": "add946577cd220f9",
+          "actual": 1,
+          "predicted": 0
+        },
+        {
+          "index": 8,
+          "id": "4df1da85b1159219",
+          "actual": 1,
+          "predicted": 0
+        },
+        {
+          "index": 12,
+          "id": "25295a277f952c2b",
+          "actual": 1,
+          "predicted": 0
+        },
+        {
+          "index": 16,
+          "id": "55c112a3ccd47d1a",
+          "actual": 1,
+          "predicted": 0
+        },
+        {
+          "index": 20,
+          "id": "00c7b87099e7018c",
+          "actual": 1,
+          "predicted": 0
+        },
+        {
+          "index": 29,
+          "id": "4a7555432c1a52f3",
+          "actual": 1,
+          "predicted": 0
+        },
+        {
+          "index": 37,
+          "id": "b549b1b082d58983",
+          "actual": 1,
+          "predicted": 0
+        },
+        {
+          "index": 38,
+          "id": "96d19d12d3d0cdea",
+          "actual": 1,
+          "predicted": 0
+        },
+        {
+          "index": 40,
+          "id": "c4bc8f1ba34b213c",
+          "actual": 1,
+          "predicted": 0
+        },
+        {
+          "index": 43,
+          "id": "e5d5204195ece444",
+          "actual": 1,
+          "predicted": 0
+        },
+        {
+          "index": 45,
+          "id": "66e8d6501a7a537a",
+          "actual": 1,
+          "predicted": 0
+        },
+        {
+          "index": 49,
+          "id": "efb768565b14a591",
+          "actual": 1,
+          "predicted": 0
+        },
+        {
+          "index": 53,
+          "id": "70ca1e5d53b3e11f",
+          "actual": 1,
+          "predicted": 0
+        },
+        {
+          "index": 57,
+          "id": "73c1ef36151777df",
+          "actual": 1,
+          "predicted": 0
+        },
+        {
+          "index": 66,
+          "id": "e2eb0d38cdfabea2",
+          "actual": 1,
+          "predicted": 0
+        },
+        {
+          "index": 70,
+          "id": "99002b049ba3f51a",
+          "actual": 1,
+          "predicted": 0
+        },
+        {
+          "index": 74,
+          "id": "c3b932bb4a3b14e4",
+          "actual": 1,
+          "predicted": 0
+        },
+        {
+          "index": 75,
+          "id": "a76386b304b0f4bc",
+          "actual": 1,
+          "predicted": 0
+        },
+        {
+          "index": 79,
+          "id": "5a26c55e7381be09",
+          "actual": 1,
+          "predicted": 0
+        },
+        {
+          "index": 80,
+          "id": "45bce5ba2ba85593",
+          "actual": 1,
+          "predicted": 0
+        },
+        {
+          "index": 81,
+          "id": "683219701df18b95",
+          "actual": 1,
+          "predicted": 0
+        },
+        {
+          "index": 83,
+          "id": "5d9bf779c6dbb97f",
+          "actual": 1,
+          "predicted": 0
+        },
+        {
+          "index": 84,
+          "id": "1cd7fec8acb1a970",
+          "actual": 1,
+          "predicted": 0
+        },
+        {
+          "index": 85,
+          "id": "5a92a13ce02b5059",
+          "actual": 1,
+          "predicted": 0
+        },
+        {
+          "index": 86,
+          "id": "a16e559267996fcf",
+          "actual": 1,
+          "predicted": 0
+        },
+        {
+          "index": 87,
+          "id": "1282c8984595a373",
+          "actual": 1,
+          "predicted": 0
+        },
+        {
+          "index": 88,
+          "id": "cb05eb3ce5adc3b7",
+          "actual": 1,
+          "predicted": 0
+        },
+        {
+          "index": 89,
+          "id": "9cd5921fab7c695c",
+          "actual": 1,
+          "predicted": 0
+        },
+        {
+          "index": 90,
+          "id": "e2711bde2fba842f",
+          "actual": 1,
+          "predicted": 0
+        },
+        {
+          "index": 91,
+          "id": "98a6343c838ee496",
+          "actual": 1,
+          "predicted": 0
+        },
+        {
+          "index": 92,
+          "id": "d328a5277b954feb",
+          "actual": 1,
+          "predicted": 0
+        },
+        {
+          "index": 94,
+          "id": "613435edc74943ba",
+          "actual": 1,
+          "predicted": 0
+        },
+        {
+          "index": 95,
+          "id": "852dc566e08ee510",
+          "actual": 1,
+          "predicted": 0
+        },
+        {
+          "index": 96,
+          "id": "99596017761772e5",
+          "actual": 1,
+          "predicted": 0
+        },
+        {
+          "index": 97,
+          "id": "42d50f291cf0da5b",
+          "actual": 1,
+          "predicted": 0
+        },
+        {
+          "index": 98,
+          "id": "1ddb66de2b6ccb70",
+          "actual": 1,
+          "predicted": 0
+        },
+        {
+          "index": 99,
+          "id": "90c66648ae584249",
+          "actual": 1,
+          "predicted": 0
+        },
+        {
+          "index": 100,
+          "id": "fac354451fe94751",
+          "actual": 1,
+          "predicted": 0
+        },
+        {
+          "index": 101,
+          "id": "309f0f02da4a6c8a",
+          "actual": 1,
+          "predicted": 0
+        },
+        {
+          "index": 102,
+          "id": "d35fba17d2a1ffdc",
+          "actual": 1,
+          "predicted": 0
+        },
+        {
+          "index": 103,
+          "id": "cc61c395ad409429",
+          "actual": 1,
+          "predicted": 0
+        },
+        {
+          "index": 104,
+          "id": "975ef152cc38631a",
+          "actual": 1,
+          "predicted": 0
+        },
+        {
+          "index": 105,
+          "id": "b711756d589b26c2",
+          "actual": 1,
+          "predicted": 0
+        },
+        {
+          "index": 106,
+          "id": "4453c5a8ad7ed274",
+          "actual": 1,
+          "predicted": 0
+        },
+        {
+          "index": 107,
+          "id": "9691170ad4a8a6bb",
+          "actual": 1,
+          "predicted": 0
+        },
+        {
+          "index": 108,
+          "id": "a294becd34572b6a",
+          "actual": 1,
+          "predicted": 0
+        },
+        {
+          "index": 109,
+          "id": "69888a8dfe8fe7aa",
+          "actual": 1,
+          "predicted": 0
+        },
+        {
+          "index": 110,
+          "id": "a7ec3fcdd53d2c4a",
+          "actual": 1,
+          "predicted": 0
+        },
+        {
+          "index": 111,
+          "id": "626ad4fa0daf5218",
+          "actual": 1,
+          "predicted": 0
+        },
+        {
+          "index": 112,
+          "id": "9c16fb704840776c",
+          "actual": 1,
+          "predicted": 0
+        },
+        {
+          "index": 113,
+          "id": "92ee9b0bbfeff7c6",
+          "actual": 1,
+          "predicted": 0
+        },
+        {
+          "index": 114,
+          "id": "14d27834e2c49a39",
+          "actual": 1,
+          "predicted": 0
+        },
+        {
+          "index": 115,
+          "id": "0f834fcf12d191f9",
+          "actual": 1,
+          "predicted": 0
+        }
+      ]
+    }
+  },
+  "selection": {
+    "epoch": 7,
+    "threshold": 0.6,
+    "validation_f1": 0.9873417721518988
+  }
+}
